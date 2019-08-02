@@ -36,7 +36,7 @@ giList = args.gi
 of = args.o
 
 # process query
-Entrez.email = "MaciaVicente@em.uni-frankfurt.de"
+Entrez.email = "your@email"
 
 id_list = set(open(giList, 'rU'))
 
