@@ -29,6 +29,11 @@ parser.add_argument(
     type=str,
     default='giList.txt')
 
+parser.add_argument(
+    "-email", help = 'tell NCBI who you are!',
+	type=str,
+    default = 'your@email')
+
 args = parser.parse_args()
 
 query = args.query
@@ -36,7 +41,7 @@ query = args.query
 of = args.o
 
 # process query
-Entrez.email = "your@email"
+Entrez.email = args.email
 handle = Entrez.esearch(
     db="nucleotide",
     term=query,

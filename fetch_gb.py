@@ -5,7 +5,7 @@
     Version: 2.0
     Author: Jose G. Macia-Vicente
     Date created: 2016-07-01
-    Date last modified: 2017-05-26
+    Date last modified: 2019-08-02
     Python Version: 2.7
 '''
 
@@ -29,6 +29,11 @@ parser.add_argument(
     type=str,
     default='gbList.txt')
 
+parser.add_argument(
+    "-email", help = 'tell NCBI who you are!',
+	type=str,
+    default = 'your@email')
+
 args = parser.parse_args()
 
 giList = args.gi
@@ -36,7 +41,7 @@ giList = args.gi
 of = args.o
 
 # process query
-Entrez.email = "your@email"
+Entrez.email = args.email
 
 id_list = set(open(giList, 'rU'))
 
