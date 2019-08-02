@@ -36,7 +36,7 @@ query = args.query
 of = args.o
 
 # process query
-Entrez.email = "MaciaVicente@em.uni-frankfurt.de"
+Entrez.email = "your@email"
 handle = Entrez.esearch(
     db="nucleotide",
     term=query,
