@@ -10,8 +10,8 @@ Miscellaneous python scripts to deal with NCBI records and sequences
 - draw_chem.py: Draw chemical structures from a file containing CID and SMILES
   values (in each row, space-separated).
 
-* Tell NCBI who you are by replacing 'your@email' with your e-mail address.
-  Also, respect the NCBI guidelines for posting requests
+* Tell NCBI who you are by stating your e-mail address using 
+  '-email <your@email>'. Also, respect the NCBI guidelines for posting requests
   (see https://www.ncbi.nlm.nih.gov/books/NBK25497): 'In order not to overload
   the E-utility servers, NCBI recommends that users post no more than three URL
   requests per second and limit large jobs to either weekends or between 9:00 PM
