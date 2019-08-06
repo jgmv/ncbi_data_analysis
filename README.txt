@@ -9,6 +9,8 @@ Miscellaneous python scripts to deal with NCBI records and sequences
 - fetch_PubChem_compound.py: Retrieve PubChem records from CID list.
 - draw_chem.py: Draw chemical structures from a file containing CID and SMILES
   values (in each row, space-separated).
+- get_metadata_from_BioSample.py: Retrieve metadata from BioSample records'
+  summary as a table.
 
 * Tell NCBI who you are by stating your e-mail address using 
   '-email <your@email>'. Also, respect the NCBI guidelines for posting requests
