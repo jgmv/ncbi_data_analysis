@@ -2,15 +2,15 @@ ncbi_data_analysis
 ================================================================================
 Miscellaneous python scripts to deal with NCBI records and sequences
 
-- fetch_gb.py*: Retrieve GenBank records from NCBI from GI list.
-- get_fasta_from_gb.py: Retrieve fasta sequences from GenBank records.
-- get_metadata_from_gb.py: Retrieve metadata from GenBank records.
-- search_ncbi_by_term.py*: Retrieve GI list from NCBI from Entrez terms.
-- fetch_PubChem_compound.py: Retrieve PubChem records from CID list.
 - draw_chem.py: Draw chemical structures from a file containing CID and SMILES
   values (in each row, space-separated).
+- fetch_gb.py*: Retrieve GenBank records from NCBI from GI list.
+- fetch_PubChem_compound.py: Retrieve PubChem records from CID list.
+- get_fasta_from_gb.py: Retrieve fasta sequences from GenBank records.
 - get_metadata_from_BioSample.py: Retrieve metadata from BioSample records'
   summary as a table.
+- get_metadata_from_gb.py: Retrieve metadata from GenBank records.
+- search_ncbi_by_term.py*: Retrieve GI list from NCBI from Entrez terms.
 
 * Tell NCBI who you are by stating your e-mail address using 
   '-email <your@email>'. Also, respect the NCBI guidelines for posting requests
