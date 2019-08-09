@@ -38,8 +38,8 @@ handle = open(if1)
 out = open(of1, "w")
 
 # write header for output file
-out.write("description\tbiosample\torganism\thost\tdate\tlocation\televation \
-  \tlat_lon\n")
+out.write("description\tbiosample\tsra\torganism\thost\tdate\tlocation\t \
+  elevation\tlat_lon\n")
 
 count = 0
 for line in handle:
@@ -54,8 +54,14 @@ for line in handle:
 		lat = "NA"
 		lon = "NA"
 	if line.startswith("Identifiers: "):
-		biosample = line.split(": ")[2]
-		biosample = biosample.replace("; Sample name", "")
+		if ";" in line:
+			biosample = line.split(": ")[2]
+			biosample = biosample.replace("; Sample name", "")
+			biosample = biosample.replace("; SRA", "")
+			try: sra = line.split(" SRA: ")[1].rstrip()
+			except: sra = "NA"
+		else:
+			biosample = line.split("BioSample: ")[1].rstrip()
 	if line.startswith("Organism: "):
 		organism = line.split(": ")[1].rstrip()
 	if line.startswith("    /host="):
@@ -77,9 +83,8 @@ for line in handle:
 				lon = float(lon) * -1
 			lat_lon = str(lat)+" "+str(lon)
 	if  line.startswith("Accession: "):
-		out.write(description+"\t"+biosample+"\t"+organism+"\t"+host+"\t"+date \
-		  +"\t"+location+"\t"+elevation+"\t"+lat_lon+"\n")
-
+		out.write(description+"\t"+biosample+"\t"+sra+"\t"+organism+"\t"+host \
+          +"\t"+date+"\t"+location+"\t"+elevation+"\t"+lat_lon+"\n")
 
 print str(count)+" records processed"
 
