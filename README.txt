@@ -10,6 +10,7 @@ Miscellaneous python scripts to deal with NCBI records and sequences
 - get_metadata_from_BioSample.py: Retrieve metadata from BioSample records'
   summary as a table.
 - get_metadata_from_gb.py: Retrieve metadata from GenBank records.
+- get_prot_from_gb.py: Retrieve protein sequences metadata from GenBank records.
 - search_ncbi_by_term.py*: Retrieve GI list from NCBI from Entrez terms.
 
 * Tell NCBI who you are by stating your e-mail address using 
