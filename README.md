@@ -19,7 +19,11 @@ Retrieves metadata from BioSample records' summary as a table.
 ### get_metadata_from_gb.py
 Retrieves metadata from GenBank records.
 
-### get_prot_from_gb.pyRetrieves protein sequences metadata from GenBank records.
+### get_prot_from_gb.py
+Retrieves protein sequences metadata from GenBank records.
+
+### parse_taxids.py
+Gets taxonomic lineages from a list of taxids.
 
 ### search_ncbi_by_term.py [^1]
 Retrieve GI list from NCBI from Entrez terms.
