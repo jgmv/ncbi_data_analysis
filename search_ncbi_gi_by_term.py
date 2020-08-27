@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
     File name: search_ncbi_gi_by_term.py
     Author: Jose G. Macia-Vicente
     Date created: 2016-06-29
-    Date last modified: 2019-07-26
-    Python Version: 2.7
+    Date last modified: 2020-08-27
+    Python Version: 3.8
 '''
 
 __author__ = "Jose G. Macia-Vicente"
@@ -55,7 +55,7 @@ giOut = open(of, "w")
 for i in record["IdList"]:
     giOut.write(i+"\n")
 
-print record["Count"] + " records extracted."
+print(record["Count"] + " records extracted.")
 
 giOut.close()
 handle.close()
