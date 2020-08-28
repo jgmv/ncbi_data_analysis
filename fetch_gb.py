@@ -43,7 +43,7 @@ of = args.o
 # process query
 Entrez.email = args.email
 
-id_list = set(open(giList, 'rU'))
+id_list = set(open(giList))
 
 id_list = list(id_list) 
 
