@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
     File name: get_metadata_from_gb.py
     Author: Jose G. Macia-Vicente
     Date created: 2015-05-26
-    Date last modified: 2019-07-25
-    Python Version: 2.7
+    Date last modified: 2020-08-28
+    Python Version: 3.8
 '''
 
 
@@ -188,7 +188,7 @@ for seq_record in SeqIO.parse(handle, "genbank"):
 
 	count +=1
 
-print str(count)+" sequences processed"
+print(str(count)+" sequences processed")
 
 handle.close()
 seqOut.close()
