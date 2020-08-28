@@ -1,12 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
     File name: fetch_gb.py
     Version: 2.0
     Author: Jose G. Macia-Vicente
     Date created: 2016-07-01
-    Date last modified: 2019-08-02
-    Python Version: 2.7
+    Date last modified: 2020-08-28
+    Python Version: 3.8
 '''
 
 __author__ = "Jose G. Macia-Vicente"
@@ -56,7 +56,7 @@ for gi in id_list:
 	giOut.write(handle.read())
 	count +=1
 	if count % 100 == 0:
-		print str(count)+" records processed..." 
+		print(str(count)+" records processed...") 
 
 giOut.close()
 handle.close()
