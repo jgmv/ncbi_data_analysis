@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
     File name: get_metadata_from_BioSample.py
     Author: Jose G. Macia-Vicente
-    Date created: 2019-08-06
-    Python Version: 2.7
+    Date created: 2020-08-28
+    Python Version: 3.8
 '''
 
 
@@ -86,7 +86,7 @@ for line in handle:
 		out.write(description+"\t"+biosample+"\t"+sra+"\t"+organism+"\t"+host \
           +"\t"+date+"\t"+location+"\t"+elevation+"\t"+lat_lon+"\n")
 
-print str(count)+" records processed"
+print(str(count)+" records processed")
 
 handle.close()
 out.close()
