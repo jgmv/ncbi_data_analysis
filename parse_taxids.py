@@ -9,7 +9,7 @@
 '''
 
 
-from ete2 import NCBITaxa
+from ete3 import NCBITaxa
 import re
 import sys
 import argparse
@@ -49,7 +49,7 @@ for record in handle:
 	taxOut.write("\n")
 	count +=1
 
-print str(count)+" taxids read"
+print(str(count))+" taxids read"
 
 handle.close()
 taxOut.close()
