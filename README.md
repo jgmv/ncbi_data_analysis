@@ -7,6 +7,9 @@ Draws chemical structures from a file containing CID and SMILES values (in each 
 ### fetch_gb.py [^1]
 Retrieves GenBank records from NCBI from GI list.
 
+### fetch_ncbi_taxonomy.py
+Retrieves the taxonomic lineages from a list of scientific taxonomic names.
+
 ### fetch_PubChem_compound.py
 Retrieves PubChem records from CID list.
 
