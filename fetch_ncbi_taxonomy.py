@@ -51,7 +51,7 @@ for record in handle:
     if args.f == 1:
         try:
             taxid = ncbi.get_name_translator([record])
-            taxid = str(taxid[record]).replace("]", "").replace("[", "")
+            taxid = str(taxid[record][0]).replace("]", "").replace("[", "")
         except:
             print(record+" not found in database.")
             taxid = 1
