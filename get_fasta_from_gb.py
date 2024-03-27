@@ -50,7 +50,7 @@ if seqname != 'acc' and seqname != 'str':
 for seq_record in SeqIO.parse(handle, "genbank"):
 	accno = seq_record.name
 	organism = "_".join(seq_record.annotations["organism"].split())
-	if seqname is 'acc':
+	if seqname == 'acc':
 		seqOut.write(">"+accno+"_"+organism+"\n")
 	else:
 		features = seq_record.features[0]
