@@ -4,8 +4,8 @@
     File name: get_metadata_from_gb.py
     Author: Jose G. Macia-Vicente
     Date created: 2014-11-18
-    Date last modified: 2020-06-27
-    Python Version: 2.7
+    Date last modified: 2024-03-27
+    Python Version: 3.10.1
 '''
 
 from Bio import SeqIO
@@ -44,7 +44,7 @@ handle = open(if1)
 seqOut = open(of1, "w")
 
 if seqname != 'acc' and seqname != 'str':
-	print "'accession' must be 'acc' or 'str'"
+	print("'accession' must be 'acc' or 'str'")
 	sys.exit()
 
 for seq_record in SeqIO.parse(handle, "genbank"):
@@ -62,7 +62,7 @@ for seq_record in SeqIO.parse(handle, "genbank"):
 
 	count +=1
 
-print str(count)+" sequences processed"
+print(str(count)+" sequences processed")
 
 handle.close()
 seqOut.close()
