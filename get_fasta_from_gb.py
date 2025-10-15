@@ -34,6 +34,11 @@ parser.add_argument(
     type=str,
     default='yes')
 
+parser.add_argument(
+    "-length", help = 'add sequence lengthto sequence id ("yes", default; "no")',
+    type=str,
+    default='yes')
+
 args = parser.parse_args()
 
 of = args.o
@@ -42,6 +47,7 @@ if1 = args.gb
 of1 = args.o
 seqname = args.accession
 taxon = args.taxon
+length = args.length
 
 count = 0
 
@@ -66,6 +72,8 @@ for seq_record in SeqIO.parse(handle, "genbank"):
 		label = "NA"
 	if taxon == 'yes':
 		label = label+"_"+organism
+	if length == 'yes':
+		label = label+" "+str(len(seq_record.seq))
 	seqOut.write(">"+label+"\n")	
 	seqOut.write(str(seq_record.seq.lower())+"\n")		
 
